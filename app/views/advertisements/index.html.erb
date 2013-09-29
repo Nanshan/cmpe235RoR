@@ -1,0 +1,15 @@
+<h1>Listing advertisements</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>URL</th>
+  </tr>
+ 
+  <% @adverts.each do |ad| %>
+    <tr>
+      <td><%= ad.name %></td>
+      <td><%= ad.url %></td>
+    </tr>
+  <% end %>
+</table>

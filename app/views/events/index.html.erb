@@ -1,0 +1,13 @@
+<h1>Listing events</h1>
+ 
+<table>
+  <tr>
+    <th>Type</th>
+  </tr>
+ 
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.type %></td>
+    </tr>
+  <% end %>
+</table>
