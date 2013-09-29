@@ -1,0 +1,2 @@
+class SMSEvent < Event
+end

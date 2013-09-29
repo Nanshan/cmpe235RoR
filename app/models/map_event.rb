@@ -1,0 +1,2 @@
+class MapEvent < Event
+end

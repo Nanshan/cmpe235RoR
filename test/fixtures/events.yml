@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  user_phone_id: MyString
+  user_location: MyText
+  sender: MyString
+  receiver: MyString
+  message: MyText
+  map_location: MyText
+
+two:
+  type: 
+  user_phone_id: MyString
+  user_location: MyText
+  sender: MyString
+  receiver: MyString
+  message: MyText
+  map_location: MyText

@@ -1,0 +1,2 @@
+class ClickThroughEvent < Event
+end
