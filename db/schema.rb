@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130929230528) do
+ActiveRecord::Schema.define(version: 20130929234246) do
 
   create_table "advertisements", force: true do |t|
     t.string   "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20130929230528) do
     t.text     "map_location"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "advertisement_id"
   end
 
 end
