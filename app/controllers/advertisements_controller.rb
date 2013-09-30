@@ -3,6 +3,10 @@ class AdvertisementsController < ApplicationController
     @advert = Advertisement.new
   end
 
+  def show
+    @advert = Advertisement.find(params[:id])
+  end
+
   def create
     @advert = Advertisement.new(params[:advertisement])
 
