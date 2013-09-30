@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params[:event])
+    @event = Event.new(params[:event].permit(:type))
  
     @event.save
     redirect_to @event
