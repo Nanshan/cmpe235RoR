@@ -10,7 +10,7 @@ skip_before_action :verify_authenticity_token
   end
 
   def create
-    @event = Event.new(params[:event].permit(:type))
+    @event = Event.new(params[:event])
  
     @event.save
     redirect_to @event
