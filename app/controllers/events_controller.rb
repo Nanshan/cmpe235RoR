@@ -6,9 +6,10 @@ skip_before_action :verify_authenticity_token
   end
 
   def impression
-    print params
-    @event = ImpressionEvent.new(params[:event])
-    @event.save
+    @advert = Advertisement.find_by name: params[:ad_name]
+    @event = ImpressionEvent.create(user_location: params[:user_location], user_phone_id: params[:user_phone_id])
+    @advert.events << @event
+    @advert.save
   end
 
   def click
