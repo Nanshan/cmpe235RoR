@@ -6,6 +6,7 @@ skip_before_action :verify_authenticity_token
   end
 
   def impression
+    print params
     @event = ImpressionEvent.new(params[:event])
     @event.save
   end
