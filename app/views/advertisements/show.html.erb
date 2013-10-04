@@ -13,20 +13,12 @@ $(function () {
         title: {
             text: 'Events by Type for <%=@advert.name%>'
         },
-        xAxis: {
-            categories: ['Impression', 'Click', 'Click-through', 'SMS', 'Map', 'Call']
-        },
-        yAxis: {
-            title: {
-                text: 'Number of events'
-            }
-        },
         series: [{
-            name: '<%= @advert.name %>',
+            name: ['Impression', 'Click', 'Click-through', 'SMS', 'Map', 'Call']
 	    data: [<%=@advert.events.where(type: "ImpressionEvent").length%>, <%=@advert.events.where(type: "ClickEvent").length%>, <%=@advert.events.where(type: "ClickThroughEvent").length%>, <%=@advert.events.where(type: "SMSEvent").length%>, <%=@advert.events.where(type: "MapEvent").length%>, <%=@advert.events.where(type: "CallEvent").length%>]
         }]
     });
 });
 </script>
-<div id="container" style="width:100%; height:800px;"></div>
+<div id="container" style="width:100%; height:400px;"></div>
 </body>
