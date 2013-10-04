@@ -11,7 +11,7 @@ $(function () {
             type: 'bar'
         },
         title: {
-            text: 'Advertisements by Event Type'
+            text: 'Tracking Events by Advertisement and Type'
         },
         xAxis: {
             categories: ['Impression', 'Click', 'Click-through', 'SMS', 'Map', 'Call']
@@ -23,10 +23,10 @@ $(function () {
         },
         series: [{
             name: '<%= @adverts[0].name %>',
-	    data: [1, 1, 1, 5, 7, 3]
+	    data: [<%=@adverts[0].events.where(type: "ImpressionEvent").length%>, <%=@adverts[0].events.where(type: "ClickEvent").length%>, <%=@adverts[0].events.where(type: "ClickThroughEvent").length%>, <%=@adverts[0].events.where(type: "SMSEvent").length%>, <%=@adverts[0].events.where(type: "MapEvent").length%>, <%=@adverts[0].events.where(type: "CallEvent").length%>]
         }, {
             name: '<%= @adverts[1].name %>',
-            data: [5, 7, 3, 1, 1, 1]
+	    data: [<%=@adverts[1].events.where(type: "ImpressionEvent").length%>, <%=@adverts[1].events.where(type: "ClickEvent").length%>, <%=@adverts[1].events.where(type: "ClickThroughEvent").length%>, <%=@adverts[1].events.where(type: "SMSEvent").length%>, <%=@adverts[1].events.where(type: "MapEvent").length%>, <%=@adverts[1].events.where(type: "CallEvent").length%>]
         }]
     });
 });
