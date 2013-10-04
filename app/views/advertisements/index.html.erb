@@ -22,10 +22,10 @@ $(function () {
             }
         },
         series: [{
-            name: <%= @adverts[0].name %>,
+            name: <%= "'" + @adverts[0].name + "'" %>,
 	    data: [1, 1, 1, 5, 7, 3]
         }, {
-            name: <%= @adverts[1].name %>,
+            name: <%= "'" + @adverts[1].name + "'" %>,
             data: [5, 7, 3, 1, 1, 1]
         }]
     });
