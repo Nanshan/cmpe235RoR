@@ -2,12 +2,20 @@
  
 <table>
   <tr>
-    <th>Type</th>
+    <th>Advertisement</th>
+    <th>Event Type</th>
+    <th>User Device ID</th>
+    <th>User Location</th>
+    <th>Timestamp</th>
   </tr>
  
   <% @events.each do |event| %>
     <tr>
+      <td><%= Advertisement.find(event.advertisement_id).name %></td>
       <td><%= event.type %></td>
+      <td><%= event.user_phone_id %></td>
+      <td><%= event.user_location %></td>
+      <td><%= event.created_at %></td>
     </tr>
   <% end %>
 </table>
