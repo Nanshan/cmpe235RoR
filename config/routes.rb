@@ -1,5 +1,5 @@
 Cmpe235project::Application.routes.draw do
-   root :to => 'index'
+   root :to => 'events/index'
    resources :advertisements
    resources :events, only: [:index]
    post '/events/impression', to: 'events#impression'
