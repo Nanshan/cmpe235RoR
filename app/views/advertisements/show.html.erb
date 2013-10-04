@@ -14,7 +14,7 @@ $(function () {
             text: 'Events by Type for <%=@advert.name%>'
         },
         series: [{
-            name: ['Impression', 'Click', 'Click-through', 'SMS', 'Map', 'Call']
+            name: ['Impression', 'Click', 'Click-through', 'SMS', 'Map', 'Call'],
 	    data: [<%=@advert.events.where(type: "ImpressionEvent").length%>, <%=@advert.events.where(type: "ClickEvent").length%>, <%=@advert.events.where(type: "ClickThroughEvent").length%>, <%=@advert.events.where(type: "SMSEvent").length%>, <%=@advert.events.where(type: "MapEvent").length%>, <%=@advert.events.where(type: "CallEvent").length%>]
         }]
     });
