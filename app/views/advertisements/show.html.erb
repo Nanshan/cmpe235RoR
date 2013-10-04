@@ -8,32 +8,25 @@
 $(function () { 
     $('#container').highcharts({
         chart: {
-            type: 'bar'
+            type: 'pie'
         },
         title: {
-            text: 'Fruit Consumption'
+            text: 'Events by Type for <%=@advert.name%>'
         },
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+            categories: ['Impression', 'Click', 'Click-through', 'SMS', 'Map', 'Call']
         },
         yAxis: {
             title: {
-                text: 'Fruit eaten'
+                text: 'Number of events'
             }
         },
         series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
+            name: '<%= @advert.name %>',
+	    data: [<%=@advert.events.where(type: "ImpressionEvent").length%>, <%=@advert.events.where(type: "ClickEvent").length%>, <%=@advert.events.where(type: "ClickThroughEvent").length%>, <%=@advert.events.where(type: "SMSEvent").length%>, <%=@advert.events.where(type: "MapEvent").length%>, <%=@advert.events.where(type: "CallEvent").length%>]
         }]
     });
 });
 </script>
-<p>
-  <strong>Name:</strong>
-  <%= @advert.name %>
-</p>
-<div id="container" style="width:100%; height:400px;"></div>
+<div id="container" style="width:100%; height:800px;"></div>
 </body>
