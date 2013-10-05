@@ -43,6 +43,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-# Google Charts
-gem 'googlecharts'
