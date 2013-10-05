@@ -27,6 +27,15 @@ $(function () {
         }, {
             name: '<%= @adverts[1].name %>',
 	    data: [<%=@adverts[1].events.where(type: "ImpressionEvent").length%>, <%=@adverts[1].events.where(type: "ClickEvent").length%>, <%=@adverts[1].events.where(type: "ClickThroughEvent").length%>, <%=@adverts[1].events.where(type: "SMSEvent").length%>, <%=@adverts[1].events.where(type: "MapEvent").length%>, <%=@adverts[1].events.where(type: "CallEvent").length%>]
+        }, {
+            name: '<%= @adverts[2].name %>',
+	    data: [<%=@adverts[2].events.where(type: "ImpressionEvent").length%>, <%=@adverts[2].events.where(type: "ClickEvent").length%>, <%=@adverts[2].events.where(type: "ClickThroughEvent").length%>, <%=@adverts[2].events.where(type: "SMSEvent").length%>, <%=@adverts[2].events.where(type: "MapEvent").length%>, <%=@adverts[2].events.where(type: "CallEvent").length%>]
+        }, {
+            name: '<%= @adverts[3].name %>',
+	    data: [<%=@adverts[3].events.where(type: "ImpressionEvent").length%>, <%=@adverts[3].events.where(type: "ClickEvent").length%>, <%=@adverts[3].events.where(type: "ClickThroughEvent").length%>, <%=@adverts[3].events.where(type: "SMSEvent").length%>, <%=@adverts[3].events.where(type: "MapEvent").length%>, <%=@adverts[3].events.where(type: "CallEvent").length%>]
+        }, {
+            name: '<%= @adverts[4].name %>',
+	    data: [<%=@adverts[4].events.where(type: "ImpressionEvent").length%>, <%=@adverts[4].events.where(type: "ClickEvent").length%>, <%=@adverts[4].events.where(type: "ClickThroughEvent").length%>, <%=@adverts[4].events.where(type: "SMSEvent").length%>, <%=@adverts[4].events.where(type: "MapEvent").length%>, <%=@adverts[4].events.where(type: "CallEvent").length%>]
         }]
     });
 });
