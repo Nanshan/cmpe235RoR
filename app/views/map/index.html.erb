@@ -1,20 +1,16 @@
-<h1>Listing SMS Events</h1>
+<h1>Listing Map Events</h1>
  
 <table>
   <tr>
     <th>Advertisement</th>
-    <th>Sender</th>
-    <th>Receiver</th>
-    <th>Message</th>
+    <th>Address</th>
     <th>Timestamp</th>
   </tr>
  
   <% @events.each do |event| %>
     <tr>
       <td><%= Advertisement.find(event.advertisement_id).name %></td>
-      <td><%= event.sender %></td>
-      <td><%= event.receiver %></td>
-      <td><%= event.message %></td>
+      <td><%= event.map_location %></td>
       <td><%= event.created_at %></td>
     </tr>
   <% end %>
