@@ -16,9 +16,9 @@ $(function () {
 	series: [{
 	    data: [
 		   <% @events.each do |event| %>
-  		      {x: <%= Time.parse(event.created_at).nsec %> , y: 5},
+  		      <%= '{x: '+Time.parse(event.created_at).nsec+', y: 5},' %>
 		   <% end %>
-		   {x: <%= Time.now.nsec %> , y: 5}
+		   <%= '{x: '+Time.now.nsec+', y: 5}' %>
 		  ]
 	}]
     });
