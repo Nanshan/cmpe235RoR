@@ -1,4 +1,4 @@
-class SMSEventsController < ApplicationController
+class SMSController < ApplicationController
 skip_before_action :verify_authenticity_token
 
   def index
